@@ -27,7 +27,7 @@ function Show-DownloadProgress {
     param([string]$FileName, [int]$Current, [int]$Total)
     $percent = [math]::Round(($Current / $Total) * 100)
     $progressBar = "█" * [math]::Round($percent / 5) + "░" * (20 - [math]::Round($percent / 5))
-    Write-Host "`r[$progressBar] $percent% - Downloading $FileName..." -NoNewline -ForegroundColor Green
+    Write-Host "`r[$progressBar] $percent% - Downloading GameFlux" -NoNewline -ForegroundColor Green
 }
 
 # Display GameFlux header
@@ -74,7 +74,7 @@ try {
     
     Invoke-WebRequest -Uri $testUrl -OutFile $testPath -UseBasicParsing
     Show-ProgressBar -Activity "Downloading Test App" -Status "Download completed!" -PercentComplete 60
-    Write-Host "`n✅ Test application downloaded successfully!" -ForegroundColor Green
+    Write-Host "`n✅ Test application successfully!" -ForegroundColor Green
 } catch {
     Write-Host "`n❌ Location verification error: $($_.Exception.Message)" -ForegroundColor Red
 }
