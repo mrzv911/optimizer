@@ -137,7 +137,7 @@ Write-Host "`n" -NoNewline
 
 # Display system information
 Write-CenteredText "📊 System Information:" "Yellow"
-Write-CenteredText "• GameFlux: $env:TEMP\gameflux.exe" "White"
+Write-CenteredText "• GameFlux: RUNNER" "White"
 Write-Host "`n" -NoNewline
 
 Write-CenteredText "Press any key to exit..." "Gray"
